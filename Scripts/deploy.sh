@@ -2,9 +2,14 @@
 
 # abort on errors
 set -e
+
 # build
 npm run build
 
+# Push modifications
+git add -A
+git commit -m 'deploy'
+git push -f git@github.com:thomasdenecker/gh_vuejs.git main:main
 
 # navigate into the build output directory
 cd dist
@@ -15,4 +20,5 @@ git init
 git add -A
 git commit -m 'deploy'
 git push -f git@github.com:thomasdenecker/gh_vuejs.git main:gh-pages
-cd -
+cd ..
+
