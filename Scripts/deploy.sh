@@ -21,4 +21,3 @@ git add -A
 git commit -m 'deploy'
 git push -f git@github.com:thomasdenecker/gh_vuejs.git main:gh-pages
 cd ..
-
